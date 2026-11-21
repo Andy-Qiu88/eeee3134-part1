@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yuxiang Qiu's engineering portfolio, from circuit design and embedded systems to magnetic resonance spectroscopy.">
+  <title>Yuxiang Qiu | Engineering Portfolio</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header frame">
+    <a class="wordmark" href="#top" aria-label="Yuxiang Qiu, page top">YQ<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Toolkit</a>
+      <a href="#interests">Interests</a>
+    </nav>
+  </header>
+
+  <main id="main" class="frame" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="section-label">Electrical &amp; Electronic Engineering</p>
+        <h1 id="hero-title">Yuxiang<br class="hero-break"> Qiu<span>.</span></h1>
+        <p class="hero-line">From circuit theory to working hardware.</p>
+        <p class="hero-description">I design, build and test electronic systems, with hands-on experience in power conversion, analogue signal conditioning and embedded control.</p>
+        <a class="button" href="#projects">Explore my projects</a>
+      </div>
+      <figure class="hero-media">
+        <img src="assets/bench.webp" alt="Close-up of a circuit board with a copper coil and orange test probes" width="1122" height="1402" fetchpriority="high">
+        <figcaption>AI-generated illustration</figcaption>
+      </figure>
+    </section>
+
+    <section id="about" class="about section" aria-labelledby="about-title">
+      <div class="about-copy">
+        <p class="section-label">About me</p>
+        <h2 id="about-title">Curiosity in theory.<br><em>Care in practice.</em></h2>
+        <p>I’m a final-year Electrical and Electronic Engineering student at the University of Nottingham Ningbo China. I enjoy figuring out why circuits behave the way they do, from the noise on an oscilloscope trace to the response of a feedback loop.</p>
+        <p>My projects have taken me from PCB layout and soldering to embedded programming. I’m now applying that mix of hardware and signal processing to a project on liver fat measurements using magnetic resonance spectroscopy.</p>
+      </div>
+      <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Yuxiang Qiu" width="960" height="1200" loading="lazy" decoding="async">
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <header class="section-heading">
+        <p class="section-label">Academic projects</p>
+        <h2 id="projects-title">Ideas, built and tested.</h2>
+      </header>
+      <article class="current-project">
+        <div>
+          <p class="section-label">Final-year project · In progress</p>
+          <h3>Measuring liver fat with magnetic resonance spectroscopy</h3>
+          <p>I’m planning a single-voxel spectroscopy workflow for comparing liver fat measurements in standing and supine positions. So far, I’ve reviewed PRESS and STEAM localisation and outlined the pulse sequence and spectral analysis.</p>
+        </div>
+        <details>
+          <summary>Technical plan</summary>
+          <ul>
+            <li>Use a vendor PRESS sequence as a reference for developing STEAM in C.</li>
+            <li>Fit water and fat peaks using jMRUI and AMARES, then apply T₂ correction to estimate proton density fat fraction (PDFF).</li>
+            <li>Validate the sequence on the scanner and compare paired measurements acquired at multiple echo times.</li>
+          </ul>
+        </details>
+      </article>
+      <div class="project-list">
+        <article class="project">
+          <div>
+            <div class="entry-meta"><p class="section-label">Power electronics</p><p class="date">Spring 2026</p></div>
+            <h3>Two-Switch Forward Converter</h3>
+            <p>I contributed to circuit simulation, PCB layout, prototyping and bench measurements for a switched-mode power supply.</p>
+            <ul class="tags" aria-label="Technologies"><li>PLECS</li><li>KiCad</li><li>PWM</li><li>Feedback control</li></ul>
+            <details>
+              <summary>My contribution</summary>
+              <ul>
+                <li>Compared open- and closed-loop operation in PLECS and laid out a two-layer PCB in KiCad.</li>
+                <li>Built PWM and gate-drive circuits, wound magnetic components and checked switching behaviour and ripple on the bench.</li>
+                <li>Designed Type I and Type III voltage-loop compensators.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="outcome">
+            <p class="section-label">Team outcome</p>
+            <p class="result">10 V DC</p>
+            <p>Regulated output under the specified load.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div>
+            <div class="entry-meta"><p class="section-label">Signal processing</p><p class="date">Autumn 2025</p></div>
+            <h3>Doppler Radar Speed Measurement System</h3>
+            <p>I built the HB100 radar signal-conditioning prototype and implemented timer-triggered sampling and FFT processing on an STM32U575.</p>
+            <ul class="tags" aria-label="Technologies"><li>HB100</li><li>LTspice</li><li>STM32</li><li>Verilog</li></ul>
+            <details>
+              <summary>My contribution</summary>
+              <ul>
+                <li>Simulated filtering, amplification and comparator stages in LTspice and developed the PCB layout in KiCad.</li>
+                <li>Checked the radar signal on the bench to tune the gain and filtering for the STM32 ADC.</li>
+                <li>Implemented display and serial decoding logic on a CPLD and integrated RS-485 communication.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="outcome">
+            <p class="section-label">Team outcome</p>
+            <p class="result">Real-time speed display</p>
+            <p>The team demonstrated a radar system that measured a target’s speed and displayed it live.</p>
+          </div>
+        </article>
+        <article class="project">
+          <div>
+            <div class="entry-meta"><p class="section-label">Embedded systems</p><p class="date">Sep 2024 – Jun 2025</p></div>
+            <h3>Multisensor Mobile Robot</h3>
+            <p>I designed motor-drive and sensor-interface circuits for a Raspberry Pi robot and implemented sensor processing and PID motion control in C/C++.</p>
+            <ul class="tags" aria-label="Technologies"><li>C/C++</li><li>Raspberry Pi</li><li>PID control</li><li>Motor drives</li></ul>
+            <details>
+              <summary>My contribution</summary>
+              <ul>
+                <li>Designed an H-bridge motor drive and level shifting for 5 V sensors connected to 3.3 V GPIO.</li>
+                <li>Integrated ultrasonic, inertial and infrared sensors. Our team measured ultrasonic distances to within ±1 cm.</li>
+                <li>Used an oscilloscope to diagnose interference and motor instability during prototype testing.</li>
+              </ul>
+            </details>
+          </div>
+          <div class="outcome">
+            <p class="section-label">Team outcome</p>
+            <p class="result">First place for vehicle appearance</p>
+            <p>Departmental interdisciplinary EEE/PDM project assessment.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section experience" aria-labelledby="experience-title">
+      <header class="section-heading">
+        <p class="section-label">Internship experiences</p>
+        <h2 id="experience-title">Learning beyond the lab.</h2>
+      </header>
+      <div class="experience-list">
+        <article class="role">
+          <div>
+            <p class="date">Jun – Sep 2026</p>
+            <h3>Hardware R&amp;D Intern</h3>
+            <p class="organisation">Huancheng Innovation Technology (Suzhou) Co., Ltd.</p>
+          </div>
+          <p>I supported fault investigation on robotic pool-cleaner mainboards. I traced power and sensor circuits in Cadence, captured power-rail and enable-signal waveforms, and decoded USB Power Delivery and I²C traffic. I also simulated parts of an ultrasonic receiver in LTspice.</p>
+        </article>
+        <article class="role">
+          <div>
+            <p class="date">Aug – Sep 2025</p>
+            <h3>Engineering Intern</h3>
+            <p class="organisation">NARI Technology Co., Ltd. · Nanjing Power Distribution Technology Branch</p>
+          </div>
+          <p>I helped test feeder and transformer terminal units, checking readings and device status on the monitoring interface. I also organised test records and wiring diagrams for a distributed energy integration project.</p>
+        </article>
+        <article class="role">
+          <div>
+            <p class="date">Jul 2025</p>
+            <h3>Electrical Engineering Intern</h3>
+            <p class="organisation">OBARA (Nanjing) Machinery &amp; Electric Co., Ltd.</p>
+          </div>
+          <p>I assisted with wiring checks and fault investigations on resistance-welding equipment. I also reviewed PLC control and weld-quality analysis methods to understand how the equipment was monitored and tested.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section" aria-labelledby="education-title">
+      <header class="section-heading">
+        <p class="section-label">Education</p>
+        <h2 id="education-title">The foundations behind the work.</h2>
+      </header>
+      <div class="education-grid">
+        <div class="degree">
+          <p class="date">Sep 2023 – Jun 2027 (expected)</p>
+          <h3>University of Nottingham Ningbo China</h3>
+          <p class="degree-name">BEng (Hons) Electrical and Electronic Engineering</p>
+          <p>My studies span analogue circuits, power conversion, embedded computing and communications. In labs and group projects, I’ve used those foundations to design circuits, write code for hardware and test the resulting systems.</p>
+        </div>
+        <div class="core-courses">
+          <h3>Selected core modules</h3>
+          <dl class="course-groups">
+            <div>
+              <dt>Completed</dt>
+              <dd>Electrical Energy Conditioning and Control</dd>
+              <dd>Electronic Processing and Communications</dd>
+            </div>
+            <div>
+              <dt>In progress</dt>
+              <dd>Analogue Electronics</dd>
+              <dd>Embedded Computing</dd>
+              <dd>Power Electronic Design</dd>
+            </div>
+          </dl>
+          <details class="course-details">
+            <summary>View more modules</summary>
+            <h4>2024–2025</h4>
+            <ul>
+              <li>Power and Energy <span class="course-code">(EEEE1035)</span></li>
+              <li>Information and Systems <span class="course-code">(EEEE1036)</span></li>
+              <li>Engineering Mathematics <span class="course-code">(EEEE1037)</span></li>
+              <li>Introduction to Software Engineering and Programming <span class="course-code">(EEEE1044)</span></li>
+              <li>Applied Electrical and Electronic Engineering Construction Project <span class="course-code">(EEEE1039)</span></li>
+              <li>Contemporary Engineering Themes A <span class="course-code">(EEEE1045)</span></li>
+            </ul>
+            <h4>2025–2026</h4>
+            <ul>
+              <li>Modelling Methods and Tools <span class="course-code">(EEEE2058)</span></li>
+              <li>Design and Implementation of Engineering Software <span class="course-code">(EEEE2067)</span></li>
+              <li>Electronic Systems Group Design Project <span class="course-code">(EEEE2075)</span></li>
+              <li>Energy Conditioning Group Design Project <span class="course-code">(EEEE2074)</span></li>
+              <li>Contemporary Engineering Themes B <span class="course-code">(EEEE2068)</span></li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <aside class="research" aria-labelledby="research-title">
+        <p class="section-label">Research writing · 2024</p>
+        <div>
+          <h3 id="research-title">Recent Advances in Memristor Research: A Study of the Optoelectronic Synaptic Properties of HfS₂/VO₂ Heterojunctions</h3>
+          <p>In this Chinese-language article, I examined reported photocurrent responses to light pulses, paired-pulse facilitation and memory transitions, and discussed their relevance to neuromorphic computing.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <header class="section-heading">
+        <p class="section-label">Technical toolkit</p>
+        <h2 id="skills-title">Tools I put to work.</h2>
+      </header>
+      <div class="toolkit">
+        <article class="tool">
+          <h3>Turning measurements into decisions</h3>
+          <p>I write C and C++ for embedded systems. For the radar, I used an STM32 timer to trigger ADC sampling at regular intervals and used an FFT to estimate the Doppler frequency. On a Raspberry Pi robot, I processed sensor readings and implemented PID motion control.</p>
+          <ul class="tags" aria-label="Tools and methods"><li>C/C++</li><li>STM32</li><li>Raspberry Pi</li><li>ADC &amp; FFT</li><li>PID control</li></ul>
+        </article>
+        <article class="tool">
+          <h3>Building from the schematic</h3>
+          <p>I use LTspice to model filter and amplifier stages before building them. For a switching converter, I compared open- and closed-loop behaviour in PLECS, designed Type I and Type III voltage-loop compensators and translated the schematic into a two-layer PCB layout in KiCad.</p>
+          <ul class="tags" aria-label="Tools and methods"><li>LTspice</li><li>PLECS</li><li>KiCad</li><li>Feedback compensation</li></ul>
+        </article>
+        <article class="tool">
+          <h3>Making hardware talk</h3>
+          <p>I used Verilog to implement display and serial decoding logic on a CPLD, with RS-485 linking parts of the radar system. During my hardware internship, I used a logic analyser to read USB Power Delivery and I²C traffic while investigating communication faults.</p>
+          <ul class="tags" aria-label="Tools and methods"><li>Verilog</li><li>CPLD</li><li>RS-485</li><li>USB PD &amp; I²C</li></ul>
+        </article>
+        <article class="tool">
+          <h3>Following a fault on the bench</h3>
+          <p>I use Cadence schematics to trace power and sensor circuits, then check the relevant rails and enable signals with an oscilloscope. I’ve also soldered and assembled prototypes, checked switching waveforms and output ripple, and documented measurements when reproducing board faults.</p>
+          <ul class="tags" aria-label="Tools and methods"><li>Cadence</li><li>Oscilloscope</li><li>Soldering</li><li>Fault diagnosis</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="interests" class="section" aria-labelledby="interests-title">
+      <header class="section-heading">
+        <p class="section-label">Interests</p>
+        <h2 id="interests-title">Off the workbench.</h2>
+      </header>
+      <div class="football">
+        <!-- ImageGen prompt: Use case: photorealistic-natural. Asset type: editorial landscape photograph, 3:2, for an English-language student portfolio’s university football section. An unbranded, lightly scuffed white football resting just inside the chalk touchline of a natural grass football pitch, with a simple distant goal and trees softly out of focus in the background. Low camera angle close to the grass, the football in the middle-right third and the touchline leading from the lower left. Late-afternoon natural sunlight, muted grass-greens, warm cream highlights, subtle analog photographic grain, contemplative feeling just before kickoff. Realistic football, believable perspective, recognisable single touchline. Generic illustrative scene, with no people, identifying venues, kit, signage, logos, captions or watermark. -->
+        <figure class="football-media">
+          <img src="assets/football.jpg" alt="A football beside the touchline on a sunlit pitch" width="1536" height="1024" loading="lazy" decoding="async">
+          <figcaption>AI-generated illustration</figcaption>
+        </figure>
+        <div class="football-copy">
+          <p class="section-label">University Football Super League</p>
+          <h3>On the pitch with Rising United.</h3>
+          <p>I play for Rising United in the university’s Football Super League. Playing with the team is one of my favourite parts of university life.</p>
+          <p class="other-interests">Away from the pitch, I enjoy listening to music, watching films and playing video games.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer frame">
+    <p>Yuxiang Qiu</p>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
