@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Yuxiang Qiu's electrical and electronic engineering portfolio, featuring circuit design, power electronics, embedded systems and hardware testing.">
+  <title>Yuxiang Qiu | Electrical &amp; Electronic Engineering</title>
+  <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header frame">
+    <a class="wordmark" href="#top" aria-label="Yuxiang Qiu, page top">YQ<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </nav>
+  </header>
+
+  <main id="main" class="frame" tabindex="-1">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Electrical &amp; Electronic Engineering</p>
+        <h1 id="intro-title">Yuxiang<br>Qiu<span>.</span></h1>
+        <p class="intro">I’m an engineering student at the University of Nottingham Ningbo China. I design, build and test electronic systems for power conversion, analogue signal conditioning and embedded control.</p>
+        <a class="primary-link" href="#projects">Explore my projects</a>
+      </div>
+      <figure class="hero-visual">
+        <img src="assets/bench.webp" alt="Close-up of a circuit board with a copper coil and orange test probes" width="1122" height="1402" fetchpriority="high">
+        <figcaption>AI-generated illustration</figcaption>
+      </figure>
+    </section>
+
+    <section class="education" aria-labelledby="education-title">
+      <h2 id="education-title" class="eyebrow">Education</h2>
+      <div>
+        <p class="degree">BEng (Hons) Electrical and Electronic Engineering</p>
+        <p>University of Nottingham Ningbo China</p>
+        <details class="coursework">
+          <summary>Relevant coursework</summary>
+          <p><strong>Completed:</strong> Electrical Energy Conditioning and Control, Electronic Processing and Communications, and Design and Implementation of Engineering Software.</p>
+          <p><strong>In progress:</strong> Analogue Electronics, Embedded Computing, and Power Electronic Design.</p>
+        </details>
+      </div>
+      <p class="date">Sep 2023 – Jun 2027 (expected)</p>
+    </section>
+
+    <section id="projects" class="projects section" aria-labelledby="projects-title">
+      <h2 id="projects-title">Selected projects</h2>
+      <div class="project-grid">
+        <article class="project capstone">
+          <div>
+            <div class="project-meta"><p class="eyebrow">Final-year project</p><p class="date">2026 – present · In progress</p></div>
+            <h3>Single-Voxel MRS for Hepatic Fat Fraction Measurement</h3>
+            <p>I’m developing a plan to measure liver fat with magnetic resonance spectroscopy and compare measurements taken while standing and lying supine.</p>
+            <p class="project-result">I reviewed PRESS and STEAM localisation and planned the sequence development and spectral analysis.</p>
+          </div>
+          <details open>
+            <summary>Technical plan</summary>
+            <ul>
+              <li>Develop STEAM in C, using a vendor PRESS sequence as a reference.</li>
+              <li>Use jMRUI and AMARES to fit water and fat peaks, correct for T₂ and estimate proton density fat fraction (PDFF).</li>
+              <li>Validate the sequence on the scanner, acquire spectra at multiple echo times and compare paired measurements.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><p class="eyebrow">Power electronics</p><p class="date">Spring 2026</p></div>
+          <h3>Two-Switch Forward Converter</h3>
+          <p>In a group design project, I worked on a switched-mode power supply from circuit simulation and PCB layout through prototyping and bench measurements.</p>
+          <p class="project-result">Our team demonstrated a regulated 10 V DC output under the specified load.</p>
+          <details>
+            <summary>Technical details</summary>
+            <ul>
+              <li>Worked on the rectifier, switching stage, transformer and LC output filter.</li>
+              <li>Compared open- and closed-loop operation in PLECS and laid out a two-layer PCB in KiCad.</li>
+              <li>Built PWM and gate-drive circuits, wound the transformer and output inductor, and measured switching behaviour and ripple.</li>
+              <li>Designed Type I and Type III voltage-loop compensators and evaluated thermal requirements.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><p class="eyebrow">Signal processing</p><p class="date">Autumn 2025</p></div>
+          <h3>Doppler Radar Speed Measurement System</h3>
+          <p>I built the HB100 radar signal-conditioning prototype and implemented timer-triggered ADC sampling and FFT processing on an STM32U575.</p>
+          <p class="project-result">Our team demonstrated real-time target-speed measurement and display.</p>
+          <details>
+            <summary>Technical details</summary>
+            <ul>
+              <li>Simulated filters, amplification and comparator stages in LTspice, and developed the PCB layout in KiCad.</li>
+              <li>Measured the intermediate-frequency signal to tune gain and filtering for the STM32 ADC.</li>
+              <li>Implemented CPLD display and serial decoding logic in Verilog and integrated RS-485 communication.</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="project">
+          <div class="project-meta"><p class="eyebrow">Embedded systems</p><p class="date">Sep 2024 – Jun 2025</p></div>
+          <h3>Multisensor Mobile Robot</h3>
+          <p>I designed motor-drive and sensor-interface circuits for a Raspberry Pi-based robot and implemented sensor processing and PID motion control in C/C++.</p>
+          <p class="project-result">Our team placed first in the department’s interdisciplinary EEE/PDM project assessment.</p>
+          <details>
+            <summary>Technical details</summary>
+            <ul>
+              <li>Designed an H-bridge motor drive and level shifting for 5 V sensors connected to 3.3 V GPIO.</li>
+              <li>Integrated ultrasonic, inertial and infrared sensors. Our team measured ultrasonic distances to within ±1 cm.</li>
+              <li>Used an oscilloscope to diagnose interference and motor instability during prototype testing.</li>
+            </ul>
+          </details>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="experience" class="experience section" aria-labelledby="experience-title">
+      <h2 id="experience-title">Industry experience</h2>
+      <div class="roles">
+        <article class="role">
+          <p class="date">Jun – Sep 2026</p>
+          <div>
+            <h3>Hardware R&amp;D Intern</h3>
+            <p class="organisation">Huancheng Innovation Technology (Suzhou) Co., Ltd.</p>
+            <p>Helped investigate faults on robotic pool-cleaner mainboards. Traced charging, power and sensor circuits in Cadence, captured power-rail and enable-signal waveforms, decoded USB PD and I²C traffic, and simulated an ultrasonic receiver in LTspice.</p>
+          </div>
+        </article>
+        <article class="role">
+          <p class="date">Aug – Sep 2025</p>
+          <div>
+            <h3>Engineering Intern</h3>
+            <p class="organisation">NARI Technology Co., Ltd.</p>
+            <p class="branch">Nanjing Power Distribution Technology Branch</p>
+            <p>Assisted with functional testing of feeder and transformer terminal units, recorded measurements and checked monitor readings. Organised test records and wiring diagrams for distributed-energy integration.</p>
+          </div>
+        </article>
+        <article class="role">
+          <p class="date">Jul 2025</p>
+          <div>
+            <h3>Electrical Engineering Intern</h3>
+            <p class="organisation">OBARA (Nanjing) Machinery &amp; Electric Co., Ltd.</p>
+            <p>Supported wiring checks and fault investigations on resistance-welding equipment and reviewed PLC control and weld-quality analysis methods.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <h2 id="skills-title">Technical skills</h2>
+      <div class="skill-grid">
+        <div><h3>Design &amp; simulation</h3><p>KiCad, LTspice, PLECS, Cadence schematic and PCB review</p></div>
+        <div><h3>Embedded development</h3><p>C/C++, basic Verilog, STM32, Raspberry Pi, CPLD, ADC/FFT, PID, I²C and RS-485</p></div>
+        <div><h3>Hardware testing</h3><p>Oscilloscope and logic analyser measurements, soldering and prototype debugging</p></div>
+      </div>
+    </section>
+
+    <section class="research" aria-labelledby="research-title">
+      <h2 id="research-title" class="eyebrow">Research writing</h2>
+      <div>
+        <h3>Recent Advances in Memristor Research: A Study of the Optoelectronic Synaptic Properties of HfS₂/VO₂ Heterojunctions</h3>
+        <p>I wrote a Chinese-language article analysing reported photocurrent responses to light pulses, paired-pulse facilitation and memory transitions in relation to neuromorphic computing.</p>
+      </div>
+      <p class="date">2024</p>
+    </section>
+  </main>
+
+  <footer class="site-footer frame">
+    <p>Outside engineering, I enjoy football, video games, films and music.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+</body>
+</html>
